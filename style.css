@@ -1,0 +1,38 @@
+.navbar-brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 40px;
+}
+
+.nav-item, .nav-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 30px;
+}
+
+.dropdown-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 25px;
+}
+
+.navbar, .dropdown-menu {
+    background-color: #f6bd60;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background-color: #f7ede2;
+}
+
+.btn-primary {
+    background-color: #f6bd60;
+    border-color: #f6bd60;
+    color: black;
+}
+
+.link-offset-2 {
+    font-size: 18px;
+    color: black;
+}
