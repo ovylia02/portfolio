@@ -1,20 +1,27 @@
+* {
+    color: #344e41;
+}
+
 .navbar-brand {
     font-family: 'JetBrains Mono', monospace;
     font-size: 40px;
+    color: #dad7cd;
 }
 
 .nav-item, .nav-link {
     font-family: 'JetBrains Mono', monospace;
     font-size: 30px;
+    color: #dad7cd;
 }
 
 .dropdown-item {
     font-family: 'JetBrains Mono', monospace;
     font-size: 25px;
+    color: #dad7cd;
 }
 
 .navbar, .dropdown-menu {
-    background-color: #f6bd60;
+    background-color: #588157;
 }
 
 body {
@@ -23,13 +30,13 @@ body {
 }
 
 .card {
-    background-color: #f7ede2;
+    background-color: #dad7cd;
 }
 
 .btn-primary {
-    background-color: #f6bd60;
-    border-color: #f6bd60;
-    color: black;
+    background-color: #3a5a40;
+    border-color: #3a5a40;
+    color: #dad7cd;
 }
 
 .link-offset-2 {
