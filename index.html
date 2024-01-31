@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <title>Portfolio</title>
+  <title>Ovylia</title>
   <link rel="icon" href="logo.png" type="image/icon type">
 
   <!--Bootstrap Stuff-->
@@ -24,128 +24,153 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
-  <!--Fun Comic Font--> <!--font-family: 'Comic Neue', cursive;-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!--Navigation Bar-->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="">&nbsp;Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              &nbsp;Projects
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#volcano">Volcanoes in Indonesia</a></li>
-              <li><a class="dropdown-item" href="#videogamesales">Video Game Sales</a></li>
-            </ul>
-          </li>
-        </ul>
+  <section id="home"></section>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
+          <div class="col-lg-3"></div>
+          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+            <li class="nav-item"><a class="nav-link scrollto" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link scrollto" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <div class="col-lg-3"></div>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!--Text-->
-  <br><br>
-  <div class="container">
-    <!--Introduction-->
-    <div class="row">
-      <div class="col-4">
-        <img src="logo.png" class="img-thumbnail">
-        <p style="font-family: 'Comic Neue', cursive;">(a real logo will be made one day...)</p>
+  <main>
+    <!--Home-->
+    <section>
+      <div class="px-4 py-5 my-5 text-center">
+        <h2 class="display-5 fw-bold text-body-emphasis">Ovylia Lie &#128048;</h2>
+        <div class="col-lg-6 mx-auto">
+          <p>Bachelor of Computer Science student</p>
+        </div>
       </div>
-      <div class="col-8">
-        <h2 style="font-family: 'JetBrains Mono', monospace;"><b>Hello World!</b></h2>
+    </section>
+
+    <!--About-->
+    <section id="about" style="background-color: white; padding-top: 100px;">
+      <div class="container">
+        <div class="text-center">
+          <h2 style="font-family: 'JetBrains Mono', monospace;"><b>About Me</b></h2>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-4">
+            <img src="logo.png" class="img-thumbnail">
+          </div>
+          <div class="col-8">
+            <h4 style="font-family: 'JetBrains Mono', monospace;"><b>Hello World!</b></h4>
+            <br>
+            I am a Computer Science student, majoring in Data Science.
+            Since highschool, I have enjoyed coding and problem solving.
+            I was also in the robotics club where I was able to showcase a robot I made myself using blocks.
+            In university, I chose to take subjects involving coding as electives, such as object oriented programming and
+            software development.
+            Apart from that, this website was fully made by me from scratch using the Bootstrap framework, it reflects my skills and attention
+            to detail.
+            These experiences have helped me improve my logical thinking abilities and my coding skill.
+          </div>
+        </div>
+        <br><br>
+        <div class="text-center">
+          <h2 style="font-family: 'JetBrains Mono', monospace;"><b>Skills</b></h2>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col">
+            <h4><b>Databases (RDBMS)</b></h4>
+            <p>Oracle SQL Developer</p>
+          </div>
+          <div class="col">
+            <h4><b>Data Visualisation</b></h4>
+            <p>Microsoft Power BI, Tableau, Vega-lite</p>
+          </div>
+          <div class="col">
+            <h4><b>Web Development</b></h4>
+            <p>HTML5, CSS, Bootstrap framework, JavaScript, MEAN Stack</p>
+          </div>
+        </div>
         <br>
-        I am a Computer Science student, majoring in Data Science.
-        Since highschool, I have enjoyed coding and problem solving.
-        I was also in the robotics club where I was able to showcase a robot I made myself using blocks.
-        In university, I chose to take subjects involving coding as electives, such as object oriented programming and
-        software development.
-        Apart from that, this website was fully made by me from scratch using the Bootstrap framework, it reflects my skills and attention
-        to detail.
-        These experiences have helped me improve my logical thinking abilities and my coding skill.
-      </div>
-    </div>
-    <br>
-
-    <!--Lists-->
-    <h3 style="font-family: 'JetBrains Mono', monospace;">Education</h3>
-    <ul>
-      <li>Bachelor of Computer Science in Data Science (ongoing)</li>
-    </ul>
-    <h3 style="font-family: 'JetBrains Mono', monospace;">Skills</h3>
-    <ul>
-      <li>Web Development (HTML5, CSS, Bootstrap Framework, JavaScript, MEAN Stack)</li>
-      <li>Databases (ORACLE RDBMS, SQL, Data Warehousing)</li>
-      <li>Data Visualisation (Microsoft Power BI, Tableau, Vega-lite)</li>
-      <li>Object Oriented Programming and Design (Java)</li>
-      <li>Algorithms and Data Structures (Python)</li>
-    </ul>
-    <br><hr><br>
-    <h4 style="font-family: 'JetBrains Mono', monospace;">Here are some of my projects:</h4>
-    <br>
-
-    <!--Cards-->
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="project_3.jpg" class="card-img-top" alt="Coming Soon">
-          <div class="card-body">
-            <h5 class="card-title"><strong>Coming Soon!</strong></h5>
-            <p class="card-text">MEAN Stack Project</p>
+        <div class="row">
+          <div class="col">
+            <h4><b>Data Warehousing</b></h4>
+            <p>Oracle SQL Developer</p>
+          </div>
+          <div class="col">
+            <h4><b>Algorithms & Data Structures</b></h4>
+            <p>Python</p>
+          </div>
+          <div class="col">
+            <h4><b>Object-oriented Programming & Design</b></h4>
+            <p>Java</p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div id="volcano" class="card" style="width: 18rem;">
-          <img src="project_2.jpg" class="card-img-top" alt="Volcanoes in Indonesia">
-          <div class="card-body">
-            <h5 class="card-title"><strong>Volcanoes in Indonesia</strong></h5>
-            <p class="card-text">This is a data visualisation created using Web Development with Vega-lite on volcanic eruptions in Indonesia</p>
-            <p class="card-text">Source: <a href="https://www.kaggle.com/datasets/elizabethdgroot/volcanoevents02021">Kaggle</a></p>
-            <a href="https://olie0001.github.io/3179_assignment2/" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div id="videogamesales" class="card" style="width: 18rem;">
-          <img src="project_1.jpg" class="card-img-top" alt="Video Game Sales">
-          <div class="card-body">
-            <h5 class="card-title"><strong>Video Game Sales</strong></h5>
-            <p class="card-text">This is a data visualisation created using Tableau on the trend in video game sales from the years 1980-2020</p>
-            <p class="card-text">Source: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle</a></p>
-            <a href="https://public.tableau.com/app/profile/ovylia.lie/viz/video_game_sales_16616900705400/Video_Game_Sales_db" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!--Footer-->
-  <br><br>
-  <footer class="py-3 my-4" style="font-family: 'Courier New', Courier, monospace">
-    <p class="text-center text-body-secondary"><b>by Ovylia Lie &#128048;</b></p>
+    <!--Portfolio-->
+    <section id="portfolio" style="background-color: white; padding: 100px;">
+      <div class="container">
+        <div class="text-center">
+          <h2 style="font-family: 'JetBrains Mono', monospace;"><b>Portfolio</b></h2>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="project_2.jpg" class="card-img-top" alt="Volcanoes in Indonesia">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Volcanoes in Indonesia</strong></h5>
+                <p class="card-text">This is a data visualisation created using Web Development with Vega-lite on volcanic eruptions in Indonesia</p>
+                <p class="card-text">Source: <a href="https://www.kaggle.com/datasets/elizabethdgroot/volcanoevents02021">Kaggle</a></p>
+                <a href="https://olie0001.github.io/3179_assignment2/" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="project_1.jpg" class="card-img-top" alt="Video Game Sales">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Video Game Sales</strong></h5>
+                <p class="card-text">This is a data visualisation created using Tableau on the trend in video game sales from the years 1980-2020</p>
+                <p class="card-text">Source: <a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle</a></p>
+                <a href="https://public.tableau.com/app/profile/ovylia.lie/viz/video_game_sales_16616900705400/Video_Game_Sales_db" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!--No Project Here-->
+          </div>
+        </div>          
+      </div>
+    </section>
+  </main>
+
+  <!--Contact-->
+  <footer id="contact" class="py-3 my-4" style="font-family: 'Courier New', Courier, monospace">
+    <p class="text-center text-body-secondary"><b>by Ovylia Lie</b></p>
     <p class="text-center text-body-secondary">
       <u><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://www.linkedin.com/in/ovylia-lie">Linkedin</a></u>
       &nbsp;
       <u><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://github.com/ovylia02">GitHub</a></u>
     </p>
-    <p class="text-body-secondary">Last updated: 05/12/2023 (Under Maintenance)</p>
   </footer>
 
-  <!--Javascript Stuff-->
+  <!--JavaScript Stuff-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
