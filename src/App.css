@@ -1,8 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    color: #023047;
+    font-size: 20px;
 }
 
 .navbar {
@@ -10,4 +9,13 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 25px;
 }
-  
+
+.footer-style {
+    background-color: #8ecae6;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.link-offset {
+    color: #231942;
+}
