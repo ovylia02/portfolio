@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #023047;
+}
+
+.navbar {
+    background-color: #8ecae6;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 25px;
+}
+  
