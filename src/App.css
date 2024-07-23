@@ -5,17 +5,18 @@ body {
 }
 
 .navbar {
-    background-color: #8ecae6;
+    background-color: #023047;
     font-family: 'JetBrains Mono', monospace;
     font-size: 25px;
 }
 
 .footer-style {
-    background-color: #8ecae6;
+    background-color: #023047;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
+    color: #8ecae6;
 }
 
 .link-offset {
-    color: #231942;
+    color: #8ecae6;
 }

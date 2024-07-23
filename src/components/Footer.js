@@ -3,9 +3,9 @@ import { Container } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <footer className="mt-5 p-4 text-center footer-style">
+        <footer style={{margin: 0, padding: 0}} className="p-4 text-center footer-style">
             <Container>
-                <p>by Ovylia Lie.</p>
+                <p>by Ovylia Lie</p>
                 <p>
                     <u><a className="link-offset" href="https://www.linkedin.com/in/ovylia-lie">Linkedin</a></u>
                     &nbsp;
