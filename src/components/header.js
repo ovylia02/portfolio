@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
         <header>
             <Navbar className="navbar" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand as={Link} to="/">
                         <img
                             src={`${process.env.PUBLIC_URL}/logo.png`}
                             alt="Logo"
@@ -18,9 +19,9 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">.home</Nav.Link>
-                            <Nav.Link href="#">.placeholder</Nav.Link>
-                            {/* ADD MORE LINKS */}
+                            <Nav.Link as={Link} to="/">.home</Nav.Link>
+                            <Nav.Link as={Link} to="/aboutme">.aboutme</Nav.Link>
+                            <Nav.Link as={Link} to="/portfolio">.portfolio</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
