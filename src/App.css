@@ -12,6 +12,9 @@ body {
 
 .footer-style {
     background-color: #023047;
+}
+
+.footer-font {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     color: #8ecae6;
@@ -19,4 +22,13 @@ body {
 
 .link-offset {
     color: #8ecae6;
+}
+
+.subheading {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
