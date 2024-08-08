@@ -32,3 +32,26 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
+
+.project-box {
+    background-color: #8ecae6;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.project-image {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 7px solid #f4a261;
+    border-radius: 10px;
+}
+
+.project-button {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
