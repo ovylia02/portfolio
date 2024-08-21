@@ -9,7 +9,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <img
-                            src={`${process.env.PUBLIC_URL}/logo.png`}
+                            src={`${process.env.PUBLIC_URL}/logo.PNG`}
                             alt="Logo"
                             width="100"
                             height="100"
