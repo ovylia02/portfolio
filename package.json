@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://ovylia02.github.io/portfolio/",
+  "homepage": "https://ovylia02-github-portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,6 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
-    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "react-scripts": "^5.0.1",
     "gh-pages": "^6.1.1"
   }
 }
