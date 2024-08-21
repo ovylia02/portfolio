@@ -7,7 +7,7 @@ const Header = () => {
         <header>
             <Navbar className="navbar" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">
+                    <Navbar.Brand as={Link} to="/portfolio">
                         <img
                             src={`${process.env.PUBLIC_URL}/logo.PNG`}
                             alt="Logo"
