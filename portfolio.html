@@ -1,0 +1,169 @@
+<!--https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--MAIN WEBSITE SETTINGS-->
+        <title>Ovylia's Portfolio</title>
+        <link rel="icon" href="logo.PNG" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!--font-family: 'Nunito', sans-serif;-->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+        <!--UI-->
+        <link rel="stylesheet" href="portfolio.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="light">
+        <!--LIGHT OR DARK MODE SCREEN-->
+        <div id="mode-screen" class="fixed inset-0 flex flex-col items-center justify-center">
+            <!--Textbox-->
+            <div class="mode-box text-center p-6 rounded-lg shadow-lg">
+                <h1 class="text-3xl font-bold mb-6">🌻 Hello! Are you a morning person or night owl? 🦉</h1>
+                <!--Buttons-->
+                <div class="flex flex-col space-y-4">
+                    <button id="light-mode" class="mode-btn">Morning Person</button>
+                    <button id="dark-mode" class="mode-btn">Night Owl</button>
+                </div>
+            </div>
+        </div>
+
+        <!--MAIN SCREEN-->
+        <div id="main-screen" class="hidden">
+            <!--Navigation-->
+            <nav class="fixed top-0 left-0 w-full p-4 z-50">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="#home" class="hover:underline transition">Home</a></li>
+                    <li><a href="#about" class="hover:underline transition">About</a></li>
+                    <li><a href="#skills" class="hover:underline transition">Skills</a></li>
+                    <li><a href="#portfolio" class="hover:underline transition">Portfolio</a></li>
+                </ul>
+            </nav>
+
+            <!--Home-->
+            <section id="home" class="h-screen flex flex-col items-center justify-center text-center">
+                <img src="logo.PNG" class="w-32 h-32 rounded-full shadow-lg mb-4" />
+                <h1 class="text-4xl font-bold">Ovylia Lie</h1>
+                <p class="text-md">Bachelor of Computer Science</p>
+            </section>
+
+            <!--About-->
+            <section id="about" class="box-color py-20 px-8 text-center shadow-md rounded-lg mx-auto max-w-3xl">
+                <h2 class="text-3xl font-bold">About Me</h2>
+                <p class="mt-4">Hello World! I am a Computer Science graduate with a strong passion for coding and problem-solving.
+                During university, I have built a strong foundation in software development and data science, 
+                which fueled my curiosity in exploring cutting-edge fields in technology.
+                During my final year, I was a part of a team project where we implemented existing NLP models to
+                develop a Patient Medical History Summarisation website.
+                I was able to showcase my software development, AI research, and leadership skills.
+                These experiences have strengthened my logical thinking abilities and coding abilities, 
+                preparing me for a career in technology.</p>
+            </section>
+
+            <!--Skills-->
+            <section id="skills" class="py-20 px-8 text-center">
+                <h2 class="text-3xl font-bold">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                    <div class="p-6 box-color shadow-lg rounded-lg">
+                        <h3 class="text-xl font-semibold">Data Science & AI</h3>
+                        <p class="mt-2">Python, SQL, Pandas, R, DBMS (Oracle, PostgreSQL), Data Warehousing (ETL), NLP,
+                        Data Visualisation (Microsoft Power BI, Tableau)
+                        </Data></p>
+                    </div>
+                    <div class="p-6 box-color shadow-lg rounded-lg">
+                        <h3 class="text-xl font-semibold">Software</h3>
+                        <p class="mt-2">JavaScript, Java, Web (HTML5, CSS, Bootstrap, Mean Stack, React.js), Version Control (Git),
+                        Algorithms and Data Structures, Object oriented programming and design, Android Studio
+                        </p>
+                    </div>
+                    <div class="p-6 box-color shadow-lg rounded-lg">
+                        <h3 class="text-xl font-semibold">Games & UI</h3>
+                        <p class="mt-2">C++, UI/UX (Figma), Unreal Engine 5, Game Design, 3D Modelling</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--Portfolio-->
+            <section id="portfolio" class="box-color py-20 px-8 text-center shadow-md rounded-lg mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold">Portfolio</h2>
+                <!--Featured-->
+                <div class="feature-color mt-6 p-6 shadow-lg rounded-lg text-left">
+                    <h3 class="text-2xl font-semibold">✨ Featured Project: Patient Medical History Summarisation</h3>
+                    <p class="mt-2">I collaborated with my team to develop a website created to provide an efficient method 
+                    for doctors to read summarised patient medical notes by using NLP techniques. 
+                    The website enables healthcare professionals to view a patient's medical timeline accompanied by summarised notes, 
+                    generated using Hugging Face' transformers' BioGPT and BART text models. 
+                    Key features include a Patient Details summary and Discharge and Radiology timelines and notes.</p>
+                    <br>
+                    <a href="https://github.com/olie0001/medical_summary_fit3164" class="hover:underline">View project →</a>
+                </div>
+                <!--Projects-->
+                <div class="mt-6 text-left">
+                    <details class=" feature-color mb-4 box-color p-4 rounded-lg shadow">
+                        <summary class="font-semibold cursor-pointer">Data Visualisation</summary>
+                        <br>
+                        <!---->
+                        <strong>Volcanoes in Indonesia visualisation</strong><br>
+                        <p>Analyses the trend in volcanic eruptions in Indonesia, aiming to provide insights into the characteristics of these events</p>
+                        <a href="https://olie0001.github.io/3179_assignment2/" class="hover:underline">View project →</a>
+                        <br><br>
+                        <!---->
+                        <strong>Video Game Sales visualisation</strong><br>
+                        <p>Analyses the trend in video game sales from the years 1980-2020</p>
+                        <a href="https://public.tableau.com/app/profile/ovylia.lie/viz/video_game_sales_16616900705400/Video_Game_Sales_db" class="hover:underline">View project →</a>
+                        <br><br>
+                    </details>
+                    <details class="feature-color mb-4 box-color p-4 rounded-lg shadow">
+                        <summary class="font-semibold cursor-pointer">User Interface Design</summary>
+                        <br>
+                        <!---->
+                        <strong>Smart Home Device Mobile Application UI design</strong><br>
+                        <p>Collaborated to design a mobile application for smart home devices, while adhering to usability and accessibility guidelines</p>
+                        <a href="https://www.figma.com/proto/QzD60o2oIWiivDm5742Nw4/Assignment-4?page-id=0%20%3A1&node-id=528-1409&viewport=651%2C773%2C0.24&t=cBgGOQ2IfpCQf54F-%201&scaling=scale-down&starting-point-node-id=528%3A1409&show-proto-sidebar=1" class="hover:underline">View project →</a>
+                        <br><br>
+                    </details>
+                </div>
+            </section>
+
+            <!--Contact-->
+            <footer class="text-center py-6 mt-10">
+                <p>Contact me at <a href="https://www.linkedin.com/in/ovylia-lie" class="hover:underline">LinkedIn</a> or <a href="https://github.com/ovylia02" class="hover:underline">GitHub</a></p>
+            </footer>
+        </div>
+
+        <!--JAVASCRIPT-->
+        <script>
+            // Variables
+            const modeScreen = document.getElementById('mode-screen');
+            const mainScreen = document.getElementById('main-screen');
+            const lightModeBtn = document.getElementById('light-mode');
+            const darkModeBtn = document.getElementById('dark-mode');
+
+            // Transition to main screen
+            function goToMain() {
+                modeScreen.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    modeScreen.style.display = 'none';
+                    mainScreen.classList.remove('hidden');
+                }, 500);
+            };
+
+            // Light VS Dark mode
+            lightModeBtn.addEventListener('click', () => {
+                document.body.classList.remove('dark');
+                document.body.classList.add('light');
+                goToMain();
+            });
+
+            darkModeBtn.addEventListener('click', () => {
+                document.body.classList.remove('light');
+                document.body.classList.add('dark');
+                goToMain();
+            });
+        </script>
+    </body>
+</html>
