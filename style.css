@@ -1,5 +1,5 @@
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Poppins", sans-serif;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -22,8 +22,13 @@ body {
     color: var(--text-color);
 }
 
+#mode-screen {
+    background-color: darkslateblue;
+    font-family: "Barriecito", system-ui;
+}
+
 .mode-box {
-    background-color: #a8dadc;
+    background-color: white;
 }
 
 .mode-btn {
