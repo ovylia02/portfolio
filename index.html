@@ -295,20 +295,15 @@
       blob.vy += .55;
       if (blob.y > ground) { blob.y = ground; blob.vy = 0; }
       const patterns = [
-        [{ offset: 0, w: 22 }],
-        [{ offset: 0, w: 18 }, { offset: 34, w: 20 }],
-        [{ offset: 0, w: 29 }],
-        [{ offset: 0, w: 18 }, { offset: 31, w: 16 }, { offset: 59, w: 20 }]
+        { w: 22, color: "#e7b5a7" },
+        { w: 18, color: "#a7c9c9" },
+        { w: 29, color: "#e5cf83" },
+        { w: 24, color: "#c9b9df" }
       ];
       const patternGaps = [94, 108, 88, 116];
       if (frame >= nextObstacleFrame) {
-        const pattern = patterns[obstaclePattern % patterns.length];
-        const colors = ["#e7b5a7", "#e5cf83", "#a7c9c9"];
-        pattern.forEach((piece, index) => rocks.push({
-          x: canvas.width * .48 + piece.offset,
-          w: piece.w,
-          color: colors[(obstaclePattern + index) % colors.length]
-        }));
+        const rock = patterns[obstaclePattern % patterns.length];
+        rocks.push({ x: canvas.width * .48, w: rock.w, color: rock.color });
         nextObstacleFrame = frame + patternGaps[obstaclePattern % patternGaps.length];
         obstaclePattern++;
       }
