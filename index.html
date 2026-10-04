@@ -1,165 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <!--MAIN WEBSITE SETTINGS-->
-        <title>Ovylia's Portfolio</title>
-        <link rel="icon" href="logo.PNG" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!--FONTS-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="My Portfolio" />
+  <title>My Portfolio</title>
+  <link rel="icon" href="logo.PNG" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Karla:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("portfolio-theme") || "light";
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <!--UI-->
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body class="light">
-        <!--LIGHT OR DARK MODE SCREEN-->
-        <div id="mode-screen" class="fixed inset-0 flex flex-col items-center justify-center">
-            <!--Textbox-->
-            <div class="mode-box text-center p-6 rounded-lg shadow-lg">
-                <h1 class="text-3xl font-bold mb-6">🌻 Hello! Are you a morning person or night owl? 🦉</h1>
-                <!--Buttons-->
-                <div class="flex flex-col space-y-4">
-                    <button id="light-mode" class="mode-btn">Morning Person</button>
-                    <button id="dark-mode" class="mode-btn">Night Owl</button>
-                </div>
+<body>
+  <header class="site-header">
+    <nav class="main-nav" aria-label="Navigation bar">
+      <a href="#intro">Intro</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true"></span>
+      <span class="theme-label">Dark</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="home intro-section section-shell" id="intro" aria-labelledby="name">
+      <div class="home-inner intro-inner">
+        <div class="intro-copy">
+          <h1 id="name">Ovylia Lie</h1>
+          <p class="job-title"><span class="crayon crayon-lilac">creative technologist</span></p>
+        </div>
+        <div class="portrait-wrap intro-visual">
+          <span class="intro-shape shape-lilac" aria-hidden="true"></span>
+          <span class="intro-shape shape-peach" aria-hidden="true"></span>
+          <span class="intro-shape shape-yellow" aria-hidden="true"></span>
+          <span class="intro-shape shape-blue" aria-hidden="true"></span>
+          <img class="portrait" src="LOGO.jpg" alt="My logo" />
+          <span class="portrait-spark" aria-hidden="true">*</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div class="section-inner narrow-inner">
+        <p class="section-label">ABOUT ME</p>
+        <h2 id="about-title">Design and Technology<span class="pastel-dot">.</span></h2>
+        <p class="about-copy">Hello! I am a Computer Science graduate currently working as a Frontend Engineer. I am
+          passionate about the intersection of technology, creativity, and user experiences. I enjoy developing applications
+          that create meaningful and engaging experiences through thoughtful design and problem-solving.</p>
+      </div>
+    </section>
+
+    <section class="portfolio section-shell" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section-inner portfolio-inner">
+        <div class="section-heading">
+          <p class="section-label">WHAT I HAVE WORKED ON</p>
+          <h2 id="portfolio-title">Portfolio<span class="pastel-dot">.</span></h2>
+        </div>
+        <article class="featured-card">
+          <div class="feature-copy">
+            <p class="project-kicker"><span class="kicker-mark" aria-hidden="true">*</span> FEATURED PROJECT</p>
+            <h3>Patient Medical History Summarisation</h3>
+            <p class="project-description">I collaborated with my team to develop a website created to provide an
+              efficient method for doctors to read summarised patient medical notes by using NLP techniques. The website
+              enables healthcare professionals to view a patient's medical timeline accompanied by summarised notes,
+              generated with the BioGPT and BART text models from Hugging Face Transformers. Key features include a
+              Patient Details summary and Discharge and Radiology timelines and notes.</p>
+            <a class="project-link feature-link" href="https://github.com/olie0001/medical_summary_fit3164"
+              target="_blank" rel="noreferrer">View our project on GitHub <span aria-hidden="true">&rarr;</span></a>
+            <div class="skill-list" aria-label="Skills and technologies"><span>Web
+                Development</span><span>NLP</span><span>BART</span><span>Python</span><span>Pandas</span></div>
+          </div>
+        </article>
+
+        <div class="other-projects" aria-label="Other projects">
+          <details class="project-dropdown">
+            <summary><span class="dropdown-index">01</span><span class="dropdown-name">Volcanoes in
+                Indonesia</span><span class="dropdown-type">Data Visualisation</span><span class="dropdown-toggle"
+                aria-hidden="true"></span></summary>
+            <div class="dropdown-clip">
+              <div class="dropdown-content">
+                <h3>Volcanoes in Indonesia</h3>
+                <p>Analyses the trend in volcanic eruptions in Indonesia, aiming to provide insights into the
+                  characteristics of these events.</p><a class="project-link"
+                  href="https://olie0001.github.io/3179_assignment2/" target="_blank" rel="noreferrer">Take a look <span
+                    aria-hidden="true">&rarr;</span></a>
+                <div class="skill-list"><span>Data Visualisation</span><span>Web
+                    Development</span><span>Storytelling</span></div>
+              </div>
             </div>
+          </details>
+
+          <details class="project-dropdown">
+            <summary><span class="dropdown-index">02</span><span class="dropdown-name">Video Game Sales</span><span
+                class="dropdown-type">Data Visualisation</span><span class="dropdown-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="dropdown-clip">
+              <div class="dropdown-content">
+                <h3>Video Game Sales</h3>
+                <p>Analyses the trend in video game sales from the years 1980-2020.</p><a class="project-link"
+                  href="https://public.tableau.com/app/profile/ovylia.lie/viz/video_game_sales_16616900705400/Video_Game_Sales_db"
+                  target="_blank" rel="noreferrer">Explore the dashboard <span aria-hidden="true">&rarr;</span></a>
+                <div class="skill-list"><span>Data Visualisation</span><span>Tableau</span><span>Storytelling</span>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="project-dropdown">
+            <summary><span class="dropdown-index">03</span><span class="dropdown-name">Smart Home Device Mobile
+                Application UI Design</span><span class="dropdown-type">Interaction Design</span><span
+                class="dropdown-toggle" aria-hidden="true"></span></summary>
+            <div class="dropdown-clip">
+              <div class="dropdown-content">
+                <h3>Smart Home Device Mobile Application UI Design</h3>
+                <p>Collaborated to design a mobile application for smart home devices, while adhering to usability and
+                  accessibility guidelines.</p><a class="project-link"
+                  href="https://www.figma.com/proto/QzD60o2oIWiivDm5742Nw4/Assignment-4?page-id=0%20%3A1&node-id=528-1409&viewport=651%2C773%2C0.24&t=cBgGOQ2IfpCQf54F-%201&scaling=scale-down&starting-point-node-id=528%3A1409&show-proto-sidebar=1"
+                  target="_blank" rel="noreferrer">Check out the prototype <span aria-hidden="true">&rarr;</span></a>
+                <div class="skill-list"><span>UI/UX</span><span>Figma</span><span>Accessibility</span></div>
+              </div>
+            </div>
+          </details>
         </div>
+        <p class="upcoming-project"><span class="upcoming-label">Upcoming project:</span> <span
+            class="crayon crayon-lilac">A productivity dashboard for visually impaired users</span></p>
+        <p class="game-invite"><button class="game-open" id="game-open" type="button">Run away from reality here
+            <span aria-hidden="true">*</span></button></p>
+      </div>
+    </section>
 
-        <!--MAIN SCREEN-->
-        <div id="main-screen" class="hidden">
-            <!--Navigation-->
-            <nav class="fixed top-0 left-0 w-full p-4 z-50">
-                <ul class="flex justify-center space-x-6">
-                    <li><a href="#home" class="hover:underline transition">Home</a></li>
-                    <li><a href="#about" class="hover:underline transition">About</a></li>
-                    <li><a href="#skills" class="hover:underline transition">Skills</a></li>
-                    <li><a href="#portfolio" class="hover:underline transition">Portfolio</a></li>
-                </ul>
-            </nav>
-
-            <!--Home-->
-            <section id="home" class="h-screen flex flex-col items-center justify-center text-center">
-                <img src="logo.PNG" class="w-32 h-32 rounded-full shadow-lg mb-4" />
-                <h1 class="text-4xl font-bold">Ovylia Lie</h1>
-                <p class="text-md">Bachelor of Computer Science</p>
-            </section>
-
-            <!--About-->
-            <section id="about" class="py-20 px-8 text-center mx-auto max-w-3xl">
-                <h2 class="text-3xl font-bold">About Me</h2>
-                <p class="mt-4">Hello World! I am a Computer Science graduate with a strong passion for coding and problem-solving.
-                During university, I have built a strong foundation in software development and data science, 
-                which fueled my curiosity in exploring cutting-edge fields in technology.
-                During my final year, I was a part of a team project where we implemented existing NLP models to
-                develop a Patient Medical History Summarisation website.
-                I was able to showcase my software development, AI research, and leadership skills.
-                These experiences have strengthened my logical thinking abilities and coding abilities, 
-                preparing me for a career in technology.</p>
-            </section>
-
-            <!--Skills-->
-            <section id="skills" class="py-20 px-8 text-center">
-                <h2 class="text-3xl font-bold">Skills</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-                    <div class="p-6 box-color shadow-lg rounded-lg">
-                        <h3 class="text-xl font-semibold">Data Science & AI</h3>
-                        <p class="mt-2">Python, SQL, Pandas, R, DBMS (Oracle, PostgreSQL), Data Warehousing (ETL), NLP,
-                        Data Visualisation (Microsoft Power BI, Tableau)</p>
-                    </div>
-                    <div class="p-6 box-color shadow-lg rounded-lg">
-                        <h3 class="text-xl font-semibold">Software</h3>
-                        <p class="mt-2">JavaScript, Java, Web (HTML5, CSS, Bootstrap, Mean Stack, React.js), Version Control (Git),
-                        Algorithms and Data Structures, Object oriented programming and design, Android Studio</p>
-                    </div>
-                    <div class="p-6 box-color shadow-lg rounded-lg">
-                        <h3 class="text-xl font-semibold">Games & UI</h3>
-                        <p class="mt-2">C++, UI/UX (Figma), Unreal Engine 5, Game Design, 3D Modelling</p>
-                    </div>
-                </div>
-            </section>
-
-            <!--Portfolio-->
-            <section id="portfolio" class="py-20 px-8 text-center mx-auto max-w-4xl">
-                <h2 class="text-3xl font-bold">Portfolio</h2>
-                <!--Featured-->
-                <div class="feature-color mt-6 p-6 shadow-lg rounded-lg text-left">
-                    <h3 class="text-2xl font-semibold">✨ Featured Project: Patient Medical History Summarisation</h3>
-                    <p class="mt-2">I collaborated with my team to develop a website created to provide an efficient method 
-                    for doctors to read summarised patient medical notes by using NLP techniques. 
-                    The website enables healthcare professionals to view a patient's medical timeline accompanied by summarised notes, 
-                    generated using Hugging Face' transformers' BioGPT and BART text models. 
-                    Key features include a Patient Details summary and Discharge and Radiology timelines and notes.</p>
-                    <br>
-                    <a href="https://github.com/olie0001/medical_summary_fit3164" class="hover:underline">View project →</a>
-                </div>
-                <!--Projects-->
-                <div class="mt-6 text-left">
-                    <details class="feature-color mb-4 box-color p-4 rounded-lg shadow">
-                        <summary class="font-semibold cursor-pointer">Data Visualisation</summary>
-                        <br>
-                        <!---->
-                        <strong>Volcanoes in Indonesia visualisation</strong><br>
-                        <p>Analyses the trend in volcanic eruptions in Indonesia, aiming to provide insights into the characteristics of these events</p>
-                        <a href="https://olie0001.github.io/3179_assignment2/" class="hover:underline">View project →</a>
-                        <br><br>
-                        <!---->
-                        <strong>Video Game Sales visualisation</strong><br>
-                        <p>Analyses the trend in video game sales from the years 1980-2020</p>
-                        <a href="https://public.tableau.com/app/profile/ovylia.lie/viz/video_game_sales_16616900705400/Video_Game_Sales_db" class="hover:underline">View project →</a>
-                        <br><br>
-                    </details>
-                    <details class="feature-color mb-4 box-color p-4 rounded-lg shadow">
-                        <summary class="font-semibold cursor-pointer">User Interface Design</summary>
-                        <br>
-                        <!---->
-                        <strong>Smart Home Device Mobile Application UI design</strong><br>
-                        <p>Collaborated to design a mobile application for smart home devices, while adhering to usability and accessibility guidelines</p>
-                        <a href="https://www.figma.com/proto/QzD60o2oIWiivDm5742Nw4/Assignment-4?page-id=0%20%3A1&node-id=528-1409&viewport=651%2C773%2C0.24&t=cBgGOQ2IfpCQf54F-%201&scaling=scale-down&starting-point-node-id=528%3A1409&show-proto-sidebar=1" class="hover:underline">View project →</a>
-                        <br><br>
-                    </details>
-                </div>
-            </section>
-
-            <!--Contact-->
-            <footer class="text-center py-6 mt-10">
-                <p>Contact me at <a href="https://www.linkedin.com/in/ovylia-lie" class="hover:underline">LinkedIn</a> or <a href="https://github.com/ovylia02" class="hover:underline">GitHub</a></p>
-            </footer>
+    <footer class="contact section-shell" id="contact" aria-label="Contact">
+      <div class="section-inner contact-inner">
+        <div class="contact-links">
+          <a class="social-icon-button" href="https://github.com/ovylia02" target="_blank" rel="noreferrer"
+            aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22 0 1.6-.02 2.9-.02 3.29 0 .32.22.69.83.57C20.57 21.8 24 17.31 24 12 24 5.37 18.63 0 12 0Z" />
+            </svg></a>
+          <a class="social-icon-button" href="https://www.linkedin.com/in/ovylia-lie" target="_blank" rel="noreferrer"
+            aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.447-2.136 2.941v5.665H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM3.555 9h3.564v11.452H3.555V9ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z" />
+            </svg></a>
         </div>
+      </div>
+    </footer>
+  </main>
 
-        <!--JAVASCRIPT-->
-        <script>
-            // Variables
-            const modeScreen = document.getElementById('mode-screen');
-            const mainScreen = document.getElementById('main-screen');
-            const lightModeBtn = document.getElementById('light-mode');
-            const darkModeBtn = document.getElementById('dark-mode');
+  <dialog class="game-dialog" id="game-dialog" aria-labelledby="game-title">
+    <div class="game-panel">
+      <div class="game-heading">
+        <div>
+          <p class="section-label">SIDE QUEST MAXXING</p>
+          <h2 id="game-title">Blob Runner<span class="pastel-dot">.</span></h2>
+        </div>
+        <button class="game-close" id="game-close" type="button" aria-label="Close game">x</button>
+      </div>
+      <p class="game-instructions">Keep tapping...</p>
+      <div class="runner-wrap" id="runner-wrap" role="button" tabindex="0"
+        aria-label="Blob runner game. Press Space or Up Arrow to jump.">
+        <canvas id="runner-canvas" width="720" height="220" aria-label="Blob runner play area"></canvas>
+        <span class="runner-score" id="runner-score" aria-live="polite">0</span>
+        <span class="runner-hint" id="runner-hint">Press Space or tap to start</span>
+      </div>
+      <div class="game-actions"><span>Score: <b id="score-value">0</b></span><button class="game-restart"
+          id="game-restart" type="button">Restart</button></div>
+    </div>
+  </dialog>
 
-            // Transition to main screen
-            function goToMain() {
-                modeScreen.classList.add('opacity-0', 'pointer-events-none');
-                setTimeout(() => {
-                    modeScreen.style.display = 'none';
-                    mainScreen.classList.remove('hidden');
-                }, 500);
-            };
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeLabel = themeToggle.querySelector(".theme-label");
+    const themeColor = document.querySelector('meta[name="theme-color"]');
 
-            // Light VS Dark mode
-            lightModeBtn.addEventListener('click', () => {
-                document.body.classList.remove('dark');
-                document.body.classList.add('light');
-                goToMain();
-            });
+    function updateThemeControl() {
+      const isDark = document.documentElement.dataset.theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute("aria-label", "Dark mode");
+      themeLabel.textContent = isDark ? "Light" : "Dark";
+      themeColor.setAttribute("content", isDark ? "#171717" : "#ffffff");
+    }
 
-            darkModeBtn.addEventListener('click', () => {
-                document.body.classList.remove('light');
-                document.body.classList.add('dark');
-                goToMain();
-            });
-        </script>
-    </body>
+    updateThemeControl();
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      updateThemeControl();
+      try {
+        localStorage.setItem("portfolio-theme", nextTheme);
+      } catch (error) {
+        // Error
+      }
+    });
+
+    const gameDialog = document.getElementById("game-dialog");
+    const gameOpen = document.getElementById("game-open");
+    const gameClose = document.getElementById("game-close");
+    const gameRestart = document.getElementById("game-restart");
+    const runnerWrap = document.getElementById("runner-wrap");
+    const canvas = document.getElementById("runner-canvas");
+    const ctx = canvas.getContext("2d");
+    const scoreReadout = document.getElementById("score-value");
+    const runnerScore = document.getElementById("runner-score");
+    const runnerHint = document.getElementById("runner-hint");
+    const ground = 184;
+    const blob = { x: 82, y: ground, vy: 0, size: 27 };
+    let rocks = [];
+    let score = 0;
+    let speed = 3.2;
+    let running = false;
+    let gameOver = false;
+    let frame = 0;
+    let obstaclePattern = 0;
+    let nextObstacleFrame = 48;
+    let animationId;
+
+    function drawRunner() {
+      const dark = document.documentElement.dataset.theme === "dark";
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = dark ? "#d6cec7" : "#49434d";
+      ctx.fillRect(0, ground + blob.size, canvas.width, 2);
+      rocks.forEach((rock) => {
+        ctx.fillStyle = rock.color;
+        ctx.beginPath();
+        ctx.moveTo(rock.x, ground + blob.size);
+        ctx.quadraticCurveTo(rock.x + 2, ground + 6, rock.x + rock.w / 2, ground + 8);
+        ctx.quadraticCurveTo(rock.x + rock.w - 2, ground + 3, rock.x + rock.w, ground + blob.size);
+        ctx.closePath();
+        ctx.fill();
+      });
+      ctx.fillStyle = "#c9b9df";
+      ctx.beginPath();
+      ctx.moveTo(blob.x - blob.size, blob.y);
+      ctx.bezierCurveTo(blob.x - blob.size - 3, blob.y - 20, blob.x - 10, blob.y - 31, blob.x + 1, blob.y - 29);
+      ctx.bezierCurveTo(blob.x + 18, blob.y - 33, blob.x + blob.size + 3, blob.y - 18, blob.x + blob.size, blob.y);
+      ctx.quadraticCurveTo(blob.x, blob.y + 5, blob.x - blob.size, blob.y);
+      ctx.fill();
+      ctx.fillStyle = "#39333d";
+      ctx.beginPath();
+      ctx.arc(blob.x - 8, blob.y - 14, 1.8, 0, Math.PI * 2);
+      ctx.arc(blob.x + 8, blob.y - 14, 1.8, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function resetRunner() {
+      cancelAnimationFrame(animationId);
+      rocks = [];
+      score = 0;
+      speed = 3.2;
+      frame = 0;
+      obstaclePattern = 0;
+      nextObstacleFrame = 48;
+      blob.y = ground;
+      blob.vy = 0;
+      running = false;
+      gameOver = false;
+      scoreReadout.textContent = "0";
+      runnerScore.textContent = "0";
+      runnerHint.textContent = "Press Space or tap to start";
+      runnerHint.hidden = false;
+      drawRunner();
+    }
+
+    function jump() {
+      if (!gameDialog.open) return;
+      if (gameOver) resetRunner();
+      if (!running) {
+        running = true;
+        runnerHint.hidden = true;
+        animateRunner();
+      }
+      if (blob.y >= ground) blob.vy = -11.5;
+    }
+
+    function animateRunner() {
+      if (!running) return;
+      frame++;
+      blob.y += blob.vy;
+      blob.vy += .55;
+      if (blob.y > ground) { blob.y = ground; blob.vy = 0; }
+      const patterns = [
+        [{ offset: 0, w: 22 }],
+        [{ offset: 0, w: 18 }, { offset: 34, w: 20 }],
+        [{ offset: 0, w: 29 }],
+        [{ offset: 0, w: 18 }, { offset: 31, w: 16 }, { offset: 59, w: 20 }]
+      ];
+      const patternGaps = [94, 108, 88, 116];
+      if (frame >= nextObstacleFrame) {
+        const pattern = patterns[obstaclePattern % patterns.length];
+        const colors = ["#e7b5a7", "#e5cf83", "#a7c9c9"];
+        pattern.forEach((piece, index) => rocks.push({
+          x: canvas.width * .48 + piece.offset,
+          w: piece.w,
+          color: colors[(obstaclePattern + index) % colors.length]
+        }));
+        nextObstacleFrame = frame + patternGaps[obstaclePattern % patternGaps.length];
+        obstaclePattern++;
+      }
+      rocks.forEach((rock) => { rock.x -= speed; });
+      rocks = rocks.filter((rock) => rock.x + rock.w > 0);
+      score++;
+      speed = 3.2 + Math.min(score / 1400, .8);
+      scoreReadout.textContent = String(Math.floor(score / 5));
+      runnerScore.textContent = String(Math.floor(score / 5));
+      const hit = rocks.some((rock) => rock.x < blob.x + 20 && rock.x + rock.w > blob.x - 20 && blob.y > ground - 15);
+      if (hit) {
+        running = false;
+        gameOver = true;
+        runnerHint.textContent = "Bonk! Tap or press Space to try again";
+        runnerHint.hidden = false;
+      }
+      drawRunner();
+      if (running) animationId = requestAnimationFrame(animateRunner);
+    }
+
+    gameOpen.addEventListener("click", () => { gameDialog.showModal(); resetRunner(); });
+    gameClose.addEventListener("click", () => gameDialog.close());
+    gameRestart.addEventListener("click", resetRunner);
+    runnerWrap.addEventListener("click", jump);
+    runnerWrap.addEventListener("keydown", (event) => { if (event.code === "Space" || event.code === "ArrowUp") { event.preventDefault(); jump(); } });
+    document.addEventListener("keydown", (event) => {
+      if (gameDialog.open && (event.code === "Space" || event.code === "ArrowUp") && document.activeElement !== gameClose && document.activeElement !== gameRestart) { event.preventDefault(); jump(); }
+    });
+    gameDialog.addEventListener("click", (event) => { if (event.target === gameDialog) gameDialog.close(); });
+    gameDialog.addEventListener("close", () => { running = false; cancelAnimationFrame(animationId); });
+    drawRunner();
+  </script>
+</body>
+
 </html>
