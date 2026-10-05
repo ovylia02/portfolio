@@ -234,13 +234,13 @@
       const dark = document.documentElement.dataset.theme === "dark";
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = dark ? "#d6cec7" : "#49434d";
-      ctx.fillRect(0, ground + blob.size, canvas.width, 2);
+      ctx.fillRect(0, ground + 5, canvas.width, 2);
       rocks.forEach((rock) => {
         ctx.fillStyle = rock.color;
         ctx.beginPath();
-        ctx.moveTo(rock.x, ground + blob.size);
-        ctx.quadraticCurveTo(rock.x + 2, ground + 6, rock.x + rock.w / 2, ground + 8);
-        ctx.quadraticCurveTo(rock.x + rock.w - 2, ground + 3, rock.x + rock.w, ground + blob.size);
+        ctx.moveTo(rock.x, ground + 5);
+        ctx.quadraticCurveTo(rock.x + 2, ground - 12, rock.x + rock.w / 2, ground - 14);
+        ctx.quadraticCurveTo(rock.x + rock.w - 2, ground - 9, rock.x + rock.w, ground + 5);
         ctx.closePath();
         ctx.fill();
       });
@@ -303,14 +303,14 @@
       const patternGaps = [94, 108, 88, 116];
       if (frame >= nextObstacleFrame) {
         const rock = patterns[obstaclePattern % patterns.length];
-        rocks.push({ x: canvas.width * .48, w: rock.w, color: rock.color });
+        rocks.push({ x: canvas.width + 8, w: rock.w, color: rock.color });
         nextObstacleFrame = frame + patternGaps[obstaclePattern % patternGaps.length];
         obstaclePattern++;
       }
       rocks.forEach((rock) => { rock.x -= speed; });
       rocks = rocks.filter((rock) => rock.x + rock.w > 0);
       score++;
-      speed = 3.2 + Math.min(score / 1400, .8);
+      speed = 2.8 + Math.sin(frame / 22) * .45 + Math.min(score / 1800, .45);
       scoreReadout.textContent = String(Math.floor(score / 5));
       runnerScore.textContent = String(Math.floor(score / 5));
       const hit = rocks.some((rock) => rock.x < blob.x + 20 && rock.x + rock.w > blob.x - 20 && blob.y > ground - 15);
